@@ -26,7 +26,16 @@ def get_guess():
 	cur_guess = input("Please enter your next guess: ")
 	return cur_guess
 
-s_word = get_secret_word()
+while True:
+	hasSpace = False
+	s_word = get_secret_word()
+	for s in s_word:
+		if s == ' ' or s == '?':
+			hasSpace = True
+	if hasSpace == False:
+		break
+
+
 board_word = []
 for i in s_word:
 	board_word.append('?')
