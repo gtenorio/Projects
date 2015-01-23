@@ -9,6 +9,21 @@ class User(db.Model):
     #backref means we can use post.author to get the user who made the post
     posts = db.relationship('Post', backref='author', lazy='dynamic') 
 
+    def is_authenticated(self):
+        return True
+
+    def is_active(self):
+        return True
+
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        try:
+            return unicode(self.id)  # python 2
+        except NameError:
+            return str(self.id)  # python 3
+
     def __repr__(self):     #how to print out an instance of this obj
         return '<User %r>' % (self.nickname)
 
