@@ -138,10 +138,19 @@ h6 {
     border-top: 3px solid #e7e7e7;
 }
 
+.vertical{
+    display: flex;
+    align-items: center;
+}
+
+.verticalproj{
+    margin-bottom: 70px;
+}
+
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/banner-bg.png) no-repeat center center;
     background-size: cover;
 }
 

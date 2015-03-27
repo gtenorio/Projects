@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 $(function($){
     var addToAll = false;
-    var gallery = true;
+    var gallery = false;
     var titlePosition = 'inside';
     $(addToAll ? 'img' : 'img.fancybox').each(function(){
         var $this = $(this);
